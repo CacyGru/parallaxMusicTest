@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Calm Music Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="#" class="logo">CMLogo</a>
+      </header>
+
+      <h1
+        class="lax"
+        data-lax-translate-y="0 0, 400 -400"
+        data-lax-opacity="0 1, 100 0"
+      >
+        Calm Music
+      </h1>
+    </div>
+
+    <div
+      class="container secondary lax"
+      data-lax-translate-y="0 0, 400 -200"
+      data-lax-opacity="0 0, 650 1"
+    >
+      <h2>Oh Wunder</h2>
+      <p class="subtext">Ein Wunder</p>
+
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis vitae
+        ut atque tempora consequatur fugiat dolorem perferendis sit totam modi
+        non minima quis, minus culpa similique illo ducimus reprehenderit.
+        Placeat!
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis vitae
+        ut atque tempora consequatur fugiat dolorem perferendis sit totam modi
+        non minima quis, minus culpa similique illo ducimus reprehenderit.
+        Placeat!
+      </p>
+    </div>
+
+    <img
+      src="./img/stars.jpg"
+      alt="Sternenhimmel"
+      class="stars lax"
+      data-lax-translate-y="0 0, 1000 -500"
+    />
+    <img
+      src="./img/blacktrees1.png"
+      alt="trees"
+      class="trees lax"
+      data-lax-translate-y="0 0, 500 -400"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script>
+      window.onload = function () {
+        lax.setup(); // init
+
+        const updateLax = () => {
+          lax.update(window.scrollY);
+          window.requestAnimationFrame(updateLax);
+        };
+
+        window.requestAnimationFrame(updateLax);
+      };
+    </script>
+  </body>
+</html>
